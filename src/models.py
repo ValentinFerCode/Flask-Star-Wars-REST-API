@@ -99,3 +99,16 @@ class Likes(db.Model):
     vehicle = db.relationship(Vehicle) 
     planets_id = db.Column(db.Integer, db.ForeignKey('planets.id'))
     planets = db.relationship(Planets)
+    
+
+    def __repr__(self):
+        return '<Likes %r>' % self.id
+
+    def serialize(self):
+        return {
+            "id": self.id,
+            "user_id": self.user_id,
+            "people_id": self.people_id,
+            "vehicle_id": self.vehicle_id,
+            "planets_id": self.planets_id,
+        }
