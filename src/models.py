@@ -39,7 +39,7 @@ class People(db.Model):
             "name": self.name,
             "birth_year": self.birth_year,
             "homeworld": self.homeworld,
-            "startship": self.starship,
+            "starship": self.starship,
         }
 
 
